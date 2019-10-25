@@ -26,7 +26,7 @@ int somamax(short int n,  int *vet, short int *ini, short int *fim){
     return max_final;
 }
 
-void main(){
+int main(){
     short int n, i, indice_inical, indice_final;
     int max_final;
     do{
@@ -39,7 +39,8 @@ void main(){
         scanf("%d", &vet[i]);
     max_final= somamax(n, vet, &indice_inical, &indice_final);
     if(max_final>0)
-        printf("Soma: %d\nIndices: %hi a %hi", max_final, indice_inical+1, indice_final+1);
+        printf("Soma: %d\nIndices: %hi a %hi\n", max_final, indice_inical+1, indice_final+1);
     else
         printf("Soma: %d", max_final);
+    return 0;
 }
