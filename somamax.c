@@ -30,17 +30,17 @@ int main(){
     int max_final;
     //Faz a validação da entrada
     do{
-        printf("Insira o tamanho do vetor, entre %d e %d: ", MIN, MAX);
+        printf("\nInsira o tamanho do vetor, entre %d e %d: ", MIN, MAX);
         scanf("%hi", &n);
     }while(n<MIN || n>MAX);
     int vet[n];
-    printf("Insira os %d valores separados por espaco: ", n);
+    printf("\nInsira os %d valores separados por espaco: ", n);
     for(i=0; i<n; i++)
         scanf("%d", &vet[i]);
     max_final= somamax(n, vet, &indice_inical, &indice_final);
     if(max_final>0)
-        printf("Soma: %d\nIndices: %hi a %hi\n", max_final, indice_inical+1, indice_final+1);
+        printf("\nSoma: %d\nIndices: %hi a %hi\n\n", max_final, indice_inical+1, indice_final+1);
     else
-        printf("Soma: %d", max_final);
+        printf("\nSoma: %d\n\n", max_final);
     return 0;
 }
